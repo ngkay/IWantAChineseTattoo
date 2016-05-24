@@ -1,0 +1,308 @@
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.header-quote {
+		display: none;
+	}
+
+	.behind-title {
+		width: 100%;
+
+		&:before {
+			display: none;
+		}
+
+		&:after {
+			content: "中文紋身";
+			font-family: Tahoma, Arial, Helvetica, "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif;
+			font-size: 3.5rem;
+			line-height: 35px;
+			color: $red;
+			padding: 10px;
+			border-bottom: 3px solid $red;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			z-index: -10;
+		}
+	}
+
+	section#quiz {
+		width: 90%;
+	}
+
+	.button {
+		font-size: 1.8rem;
+	}
+
+	.result-container {
+		flex-flow: row wrap;
+	}
+
+	.result-image {
+		height: 300px;
+	}
+
+	.result-text {
+		.button {
+			width: 100%;
+		}
+	}
+
+	.result-js-text {
+		margin-bottom: 15px;
+	}
+
+	.femaleforearm {
+		height: 85px;
+		top: 35%;
+
+		h1 {
+			font-size: 2.75rem;
+			line-height: 28px;
+		}
+	}
+
+	.maleforearm {
+		height: 80px;
+		top: 40%;
+	}
+
+	.femaleshoulder {
+		width: 25%;
+		left: 58%;
+
+		h1 {
+			font-size: 3.5rem;
+			line-height: 35px;
+		}
+	}
+
+	.maleshoulder {
+		width: 25%;
+		top: 15%;
+
+		h1 {
+			font-size: 3.5rem;
+			line-height: 35px;
+		}
+	}
+
+	.femaletorso {
+		top: 40%;
+		left: 20%;
+
+		h1 {
+			font-size: 2.5rem;
+			line-height: 25px;
+		}
+	}
+
+	.maletorso {
+		width: 20%;
+		left: 66%;
+
+		h1 {
+			font-size: 2.75rem;
+			line-height: 28px;
+		}
+	}
+
+	.femaleback {
+		top: 37%;
+
+		h1 {
+			font-size: 3.5rem;
+			line-height: 35px;
+		}
+	}
+
+	.maleback {
+		top: 28%;
+
+		h1 {
+			font-size: 3rem;
+			line-height: 30px;
+		}
+	}
+
+	.femalecalf {
+		width: 20%;
+		left: 39%;
+
+		h1 {
+			font-size: 2.75rem;
+			line-height: 28px;
+		}
+	}
+
+	.malecalf {
+		width: 20%;
+		left: 15%;
+
+		h1 {
+			font-size: 2.75rem;
+			line-height: 28px;
+		}
+	}
+
+	.femaleneck {
+		left: 25%;
+
+		h1 {
+			font-size: 4rem;
+			line-height: 40px;
+		}
+	}
+
+	.maleneck {
+		width: 55%;
+
+		h1 {
+			font-size: 5rem;
+			line-height: 50px;
+		}
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 660px) {
+	h1 {
+		font-size: 5.5rem;
+		line-height: 50px;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3, p {
+		font-size: 1.5rem;
+	}
+
+	.behind-title {
+		&:after {
+			font-size: 3.25rem;
+		}
+	}
+
+	section#quiz {
+		padding: 15px;
+	}
+
+	fieldset {
+		margin: 10px 0;
+		padding: 10px;
+	}
+
+	.question {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	.answers {
+		text-align: center;
+	}
+
+	label {
+		margin: 0 15px 10px 30px;
+	}
+
+	.button {
+		font-size: 1.5rem;
+	}
+
+	.result-image, .result-text {
+		width: 100%;
+	}
+
+	.result-image {
+		height: 350px;
+		margin-bottom: 15px;
+		border-bottom: none;
+	}
+
+	.result-text {
+		padding: 20px;
+		border-bottom: 10px solid $blue;
+
+		.button {
+			width: 100%;
+		}
+	}
+
+	.femaleforearm {
+		top: 40%;
+	}
+
+	.maleforearm {
+		top: 42%;
+	}
+
+	.femaletorso {
+		width: 15%;
+		left: 25%;
+	}
+
+	.maletorso {
+		width: 15%;
+		left: 64%;
+	}
+
+	.maleback {
+		top: 25%;
+	}
+
+	.femalecalf {
+		left: 38%;
+	}
+
+	.maleneck {
+		width: 40%;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	h1 {
+		font-size: 5.25rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+
+	header.wrapper {
+		margin: 5% auto;
+	}
+
+	.behind-title {
+		&:after {
+			content: "中文紋身";
+			bottom: 60%;
+		}
+	}
+
+	section.wrapper {
+		width: 100%;
+		margin: 0;
+	}
+
+	section {
+		border-radius: 0;
+	}
+
+	section#quiz {
+		width: 100%;
+	}
+
+	.result-image, .result-text {
+		border-radius: 0;
+	}
+
+	.result-image {
+		height: 250px;
+		margin-bottom: 0;
+	}
+}

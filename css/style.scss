@@ -1,0 +1,436 @@
+$blue: #28B4E8;
+$darkblue: #0B3140;
+$red: #FF245D;
+$lightgrey: #F5F5F5;
+
+@import 'setup';
+@import 'type';
+
+html {
+	background: url(../images/background.jpg) repeat;
+	color: $darkblue;
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+header{
+	&.wrapper {
+		margin: 3% auto;
+		position: relative;
+	}
+
+	p {
+		width: 40%;
+		margin: 0;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.header-quote {
+	max-width: 50%;
+	padding: 10px;
+	font-family: Georgia, "Times New Roman", "KaiTi", "楷体", STKaiti, "华文楷体", serif;
+	font-size: 4rem;
+	border-bottom: 3px solid $blue;
+	color: $blue;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -10;
+
+	&:after {
+		content: "Quote of the Day";
+		color: $blue;
+		font-size: 2rem;
+		position: absolute;
+		bottom: -30px;
+		right: 10px;
+	}
+}
+
+.behind-title {
+	position: relative;
+	display: inline-block;
+
+	&:before {
+		content: "中文紋身";
+		font-family: Tahoma, Arial, Helvetica, "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif;
+		font-size: 3.5rem;
+		line-height: 35px;
+		color: $red;
+		padding: 10px;
+		border-bottom: 3px solid $red;
+		position: absolute;
+		top: -30px;
+		left: -30px;
+		z-index: -10;
+	}
+}
+
+section.wrapper {
+	margin-bottom: 3%;
+	background: #FFF;
+}
+
+section {
+	margin: 0 auto;
+	transition: 1s all;
+	position: absolute;
+	border-radius: 4px;
+	text-align: center;
+}
+
+section#quiz {
+	width: 70%;
+	padding: 20px;
+	left: 0;
+	right: 0;
+	border-bottom: 10px solid $blue;
+}
+
+fieldset {
+	margin: 15px 0;
+	padding: 10px 10px 10px 25px;
+	border: none;
+	border-radius: 4px;
+	background: $lightgrey;
+}
+.question {
+	width: 25%;
+	margin-right: 25px;
+	float: left;
+	text-align: left;
+
+	h3 {
+		font-weight: 500;
+		color: $blue;
+	}
+}
+
+.answers {
+	width: auto;
+	padding: 15px 5px 0;
+	background: #FFF;
+	border-radius: 3px;
+	overflow: hidden;
+	text-align: left;
+}
+
+input[type=radio] {
+	display: none;
+}
+
+label {
+	font-size: 1.5rem;
+	line-height: 15px;
+	margin: 0 15px 15px 30px;
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		background: #EEE;
+		box-shadow: 0 0 0 1.5px $blue inset;
+		position: absolute;
+		top: 0px;
+		left: -20px;
+		border-radius: 4px;
+	}
+}
+
+input[type=radio]:checked + label:before {
+	content: "";
+	background: $blue;
+}
+
+section#result {
+	position: relative;
+	left: -100%;
+	right: 100%;
+	transition: all 1s .7s;
+}
+
+#result {
+	background: none;
+}
+
+.result-container {
+	width: 100%;
+	margin: 3% 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.result-image, .result-text {
+	width: 49%;
+	border-radius: 5px;
+}
+
+.result-image {
+	height: 400px;
+	background-size: cover;
+	border-bottom: 10px solid $blue;
+	position: relative;
+	overflow: hidden;
+}
+
+.result-tattoo {
+	width: 30px;
+	position: absolute;
+	right: 25px;
+	text-align: center;
+
+	h1 {
+		font-family: Georgia, "Times New Roman", "KaiTi", "楷体", STKaiti, "华文楷体", serif;
+		color: rgba(10, 21, 3, 0.75);
+	}
+}
+
+.result-text {
+	padding: 25px;
+	text-align: left;
+	background: #FFF;
+	display: flex;
+	flex-flow: column nowrap;
+	align-content: flex-start;
+
+	h2:first-child {
+		margin-bottom: 15px;
+	}
+
+	.button {
+		width: 70%;
+		margin-bottom: 10px;
+		text-align: center;
+		align-self: center;
+	}
+
+	a.button {
+		margin-bottom: 0;
+	}
+}
+
+.result-js-text {
+	flex-grow: 1;
+}
+
+.pinyin {
+	font-style: italic;
+	color: #888;
+}
+
+.button {
+	padding: 10px 20px;
+	font-family: 'Kanit', sans-serif;
+	font-weight: 600;
+	font-size: 2rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: $blue;
+	color: #FFF;
+	border: none;
+	border-radius: 3px;
+	display: inline-block;
+
+	&:hover {
+		background: $lightgrey;
+		color: $blue;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+a.button {
+	background: $red;
+
+	&:hover {
+		color: $red;
+	}
+}
+
+.femaleforearm {
+	width: 50%;
+	height: 90px;
+	position: absolute;
+	left: 25%;
+	top: 39%;
+	display: flex;
+	align-items: center;
+
+	h1 {
+		font-size: 3rem;
+		line-height: 30px;
+	}
+}
+
+.maleforearm {
+	width: 55%;
+	height: 95px;
+	position: absolute;
+	right: 5px;
+	top: 41%;
+	display: flex;
+	align-items: center;
+
+	h1 {
+		font-size: 3rem;
+		line-height: 30px;
+	}
+}
+
+.femaleshoulder {
+	width: 20%;
+	position: absolute;
+	top: 20%;
+	left: 62%;
+
+	h1 {
+		font-size: 4.5rem;
+		line-height: 45px;
+	}
+}
+
+.maleshoulder {
+	width: 20%;
+	position: absolute;
+	top: 15%;
+	left: 45%;
+
+	h1 {
+		font-size: 4.5rem;
+		line-height: 50px;
+	}
+}
+
+.femaletorso {
+	width: 20%;
+	position: absolute;
+	top: 46%;
+	left: 18%;
+	transform: rotate(15deg);
+
+	h1 {
+		font-size: 3.25rem;
+		line-height: 30px;
+	}
+}
+
+.maletorso {
+	width: 18%;
+	position: absolute;
+	top: 20%;
+	left: 68%;
+	transform: rotate(3deg);
+
+	h1 {
+		font-size: 3.5rem;
+		line-height: 35px;
+	}
+}
+
+.femaleback {
+	width: 60%;
+	position: absolute;
+	top: 35%;
+	left: 20%;
+	transform: rotate(-6deg);
+
+	h1 {
+		font-size: 5rem;
+	}
+}
+
+.maleback {
+	width: 25%;
+	position: absolute;
+	top: 20%;
+	left: 32%;
+	transform: rotate(2deg);
+
+	h1 {
+		font-size: 5rem;
+		line-height: 50px;
+	}
+}
+
+.femalecalf {
+	width: 15%;
+	position: absolute;
+	top: 20%;
+	left: 42%;
+	transform: rotate(-10deg);
+
+	h1 {
+		font-size: 3.25rem;
+		line-height: 35px;
+	}
+}
+
+.malecalf {
+	width: 25%;
+	position: absolute;
+	top: 18%;
+	left: 13%;
+
+	h1 {
+		font-size: 3.8rem;
+		line-height: 38px;
+	}
+}
+
+.femaleneck {
+	width: 45%;
+	position: absolute;
+	top: 35%;
+	left: 30%;
+	transform: rotate(15deg);
+	
+	h1 {
+		font-size: 5rem;
+		line-height: 50px;
+	}
+}
+
+.maleneck {
+	width: 50%;
+	position: absolute;
+	top: 28%;
+	left: 23%;
+	transform: rotate(-15deg);
+
+	h1 {
+		font-size: 6rem;
+		line-height: 60px;
+	}
+}
+
+.uaq:after {
+	content: " *";
+	color: $red;
+	font-size: 1.8rem;
+}
+
+footer.wrapper {
+	margin: 5% auto;
+	text-align: center;
+	transition: all 1s;
+
+	p {
+		font-size: 1.2rem;
+	}
+}
+
+@import 'mediaqueries';

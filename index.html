@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Chinese Tattoo Generator</title>
+	<link rel="icon" href="images/favicon.png" type="image/png">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Kanit:400,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<header class="wrapper">
+		<h1 class="behind-title">Chinese Tattoo<br />Generator</h1>
+		<h2 class="header-quote">quote</h2>
+	</header>
+	<section class="wrapper" id="quiz">
+		<h2>Chinese tattoos are awesome! But what if you don't know chinese? Now you can generate your own awesome tattoo!</h2>
+		<form action="">
+			<fieldset class="gender">
+				<div class="question">
+					<h3>Are you male or female?</h3>
+				</div>
+				<div class="answers">
+					<input type="radio" name="gender" id="male" value="male">
+					<label for="male">Male</label>
+					<input type="radio" name="gender" id="female" value="female">
+					<label for="female">Female</label>
+				</div>
+			</fieldset>
+			<fieldset class="body-part">
+				<div class="question">
+					<h3>Where do you want the tattoo?</h3>
+				</div>
+				<div class="answers">
+					<input type="radio" name="body-part" id="forearm" value="forearm">
+					<label for="forearm">Forearm</label>
+					<input type="radio" name="body-part" id="shoulder" value="shoulder">
+					<label for="shoulder">Shoulder</label>
+					<input type="radio" name="body-part" id="torso" value="torso">
+					<label for="torso">Torso</label>
+					<input type="radio" name="body-part" id="back" value="back">
+					<label for="back">Back</label>
+					<input type="radio" name="body-part" id="calf" value="calf">
+					<label for="calf">Calf</label>
+					<input type="radio" name="body-part" id="neck" value="neck">
+					<label for="neck">Neck</label>
+				</div>
+			</fieldset>
+			<fieldset class="feel">
+				<div class="question">
+					<h3>What style of tattoo do you want?</h3>
+				</div>
+				<div class="answers">
+					<input type="radio" name="feel" id="funny" value="funny">
+					<label for="funny">Funny</label>
+					<input type="radio" name="feel" id="motivational" value="motivational">
+					<label for="motivational">Motivational</label>
+					<input type="radio" name="feel" id="confident" value="confident">
+					<label for="confident">Confident</label>
+					<input type="radio" name="feel" id="adventurous" value="adventurous">
+					<label for="adventurous">Adventurous</label>
+				</div>
+			</fieldset>
+			<fieldset class="sobriety">
+				<div class="question">
+					<h3>How sober are you??</h3>
+				</div>
+				<div class="answers">
+					<input type="radio" name="sobriety" id="sober" value="sober">
+					<label for="sober">Sober</label>
+					<input type="radio" name="sobriety" id="drunk" value="drunk">
+					<label for="drunk">Very Not Sober</label>
+				</div>
+			</fieldset>
+			<div class="submit-container">
+				<input type="submit" class="button" value="Give me a tattoo!">
+			</div>
+		</form>
+	</section>
+	<section class="wrapper" id="result">
+		<div class="result-container">
+			<div class="result-image">
+				<div class="result-tattoo"></div>
+			</div>
+			<div class="result-text">
+				<div class="result-js-text"></div>
+				<input type="submit" class="redo button" value="Gimme another one!">
+				<a href="index.html" class="button">Start over!</a>
+			</div>
+		</div>
+	</section>
+	<footer class="wrapper">
+		<p>Designed, created and tatted by <a href="https://twitter.com/d2dev_">David Dales</a> and <a href="https://twitter.com/NGKayyy">Kevin Ng</a> © 2016</p>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
